@@ -5,7 +5,7 @@ Home: https://github.com/SeldonIO/alibi-detect
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/alibi-detect-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/alibi-detect-feedstock/blob/main/LICENSE.txt)
 
 Summary: Algorithms for outlier detection, concept drift and metrics.
 
@@ -44,8 +44,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15178&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/alibi-detect-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15178&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/alibi-detect-feedstock?branchName=main">
       </a>
     </td>
   </tr>
