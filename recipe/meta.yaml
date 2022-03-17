@@ -1,5 +1,5 @@
 {% set name = "alibi-detect" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/alibi-detect-{{ version }}.tar.gz
-  sha256: 329110ce128e68a940a35b93ebea086a3660964d88825e491f2319021e114035
+  sha256: 99e770cdec7828c9e46db074a5ab21a4a6490978cc85b23f2fe07c1cf8f07c4f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
