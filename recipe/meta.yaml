@@ -1,5 +1,5 @@
 {% set name = "alibi-detect" %}
-{% set version = "0.9.0" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/alibi-detect-{{ version }}.tar.gz
-  sha256: 99e770cdec7828c9e46db074a5ab21a4a6490978cc85b23f2fe07c1cf8f07c4f
+  sha256: 7c24b313b8a1b38812db2134274a2e34e0d1407f51502689641f57dbb2b57138
 
 build:
   number: 0
@@ -26,15 +26,20 @@ requirements:
     - numpy >=1.16.2,<2.0.0
     - opencv >=3.2.0,<5.0.0
     - pandas >=0.23.3,<2.0.0
-    - pillow >=5.4.1,<9.0.0
+    - pillow >=5.4.1,<10.0.0
     - requests >=2.21.0,<3.0.0
-    - scikit-image >=0.14.2,!=0.17.1,<0.19
-    - scikit-learn >=0.20.2,<1.1.0
+    - scikit-image >=0.14.2,!=0.17.1,<0.20
+    - scikit-learn >=0.20.2,<2.0.0
     - scipy >=1.3.0,<2.0.0
-    - tensorflow >=2.2.0,!=2.6.0,!=2.6.1,<2.8.0
-    - tensorflow-probability >=0.8.0,<0.13.0
+    - tensorflow >=2.2.0,!=2.6.0,!=2.6.1,<2.10.0
+    - tensorflow-probability >=0.8.0,<0.18.0
     - tqdm >=4.28.1,<5.0.0
     - transformers >=4.0.0,<5.0.0
+    - pytorch >=1.7.0,<1.13.0  # torch is a dep of transformers' recipe. Include to bound version.
+    - typing-extensions >=3.7.4.3
+    - pydantic >=1.8.0,<2.0.0
+    - toml >=0.10.1,<1.0.0
+    - catalogue >=2.0.0,<3.0.0
     # Necessary for passing pip-check
     - absl-py >=0.10.0,<0.11.0
     - wrapt >=1.12.1,<1.13.0
