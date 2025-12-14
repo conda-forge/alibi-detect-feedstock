@@ -1,13 +1,13 @@
 {% set name = "alibi-detect" %}
-{% set version = "0.11.4" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/alibi-detect-{{ version }}.tar.gz
-  sha256: 5e81eee628260a264e5ebf27d9ab400a34f8ab53d1c0e883547c4c6f9b1aa1be
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 07a468cac6ef0773c060d915544d0c9bd67f77400e75dfe435b1ea9a81679223
 
 build:
   number: 0
