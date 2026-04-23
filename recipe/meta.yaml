@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/alibi-detect-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/alibi-detect-{{ version }}.tar.gz
   sha256: 5e81eee628260a264e5ebf27d9ab400a34f8ab53d1c0e883547c4c6f9b1aa1be
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     # Core dependencies
-    - python >=3.7
+    - python >={{ python_min }}
     - dill >=0.3.0,<0.4.0
     - matplotlib-base >=3.0.0,<4.0.0
     - numba >=0.50.0,!=0.54.0,<0.56.0
@@ -48,6 +48,8 @@ requirements:
     - libgdal
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - alibi_detect
   # commands:
